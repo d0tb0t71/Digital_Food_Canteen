@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "188838320559",
+    "project_id": "digital-campus-canteen",
+    "storage_bucket": "digital-campus-canteen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188838320559:android:cd7101b4b27983fc17375a",
+        "android_client_info": {
+          "package_name": "com.example.digitalcampuscanteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188838320559-n7b700ucfbece6gm7dg8rvincj91cfv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwtNvVNWbEXpPH9d0SGNifSvT4fj_964g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188838320559-n7b700ucfbece6gm7dg8rvincj91cfv2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
