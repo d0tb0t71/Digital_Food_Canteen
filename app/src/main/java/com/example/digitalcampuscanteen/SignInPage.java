@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignInPage extends AppCompatActivity {
 
-    Button signup,gosignin;
+    Button signin,gosignin;
     EditText log_email,log_pass;
 
     FirebaseAuth mAuth;
@@ -32,13 +32,13 @@ public class SignInPage extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        signup = findViewById(R.id.signup);
+        signin = findViewById(R.id.signin);
         gosignin = findViewById(R.id.gosignin);
 
         log_email = findViewById(R.id.log_email);
         log_pass = findViewById(R.id.log_pass);
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

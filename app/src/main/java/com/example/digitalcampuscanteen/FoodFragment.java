@@ -14,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -51,6 +54,22 @@ public class FoodFragment extends Fragment {
         list = new ArrayList<ItemModel>();
         itemAdapter =new ItemAdapter(getContext(),list);
         food_recyclerview.setAdapter(itemAdapter);
+
+
+        DocumentReference documentReference = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                String st = value.getString("userStatus");
+
+                if(st.equals("admin")){
+                    add_item.setVisibility(View.VISIBLE);
+                }
+
+            }
+        })
+        ;
 
         db.collection("item")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
