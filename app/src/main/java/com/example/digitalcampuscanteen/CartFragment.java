@@ -21,7 +21,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class CartFragment extends Fragment {
 
@@ -123,18 +125,23 @@ public class CartFragment extends Fragment {
 
              }
 
+
+
+
+
+
              Timestamp timestamp = new Timestamp(System.currentTimeMillis());
              long time = timestamp.getTime();
              String orderID = "orderID" + time;
 
 
              String total = "Total Price : " + String.valueOf(totalPrice);
-             OrderModel orderModel = new OrderModel(orderID,FirebaseAuth.getInstance().getCurrentUser().getUid(),orderList,"placed",total);
+             OrderModel orderModel = new OrderModel(orderID,FirebaseAuth.getInstance().getCurrentUser().getUid(),orderList,"placed",total,String.valueOf(time));
 
 
              db.collection("orders")
                      .document("myOrders")
-                     .collection(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                     .collection("orderList")
                      .document(orderID)
                      .set(orderModel);
 

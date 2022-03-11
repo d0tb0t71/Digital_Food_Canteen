@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalCampusCanteen">
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDetails"
+            android:exported="false" />
+        <activity
+            android:name=".MyOrders"
+            android:exported="false" />
+        <activity
             android:name=".EditItem"
             android:exported="false" />
         <activity

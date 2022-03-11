@@ -19,7 +19,6 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25dp"
-        android:layout_marginBottom="100dp"
         />
 
     <ImageView
@@ -58,7 +57,14 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <Button
+        android:id="@+id/my_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Orders"
         />
 
     <Button

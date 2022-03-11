@@ -7,16 +7,18 @@ public class OrderModel {
     String order;
     String orderStatus;
     String totalModel;
+    String orderTime;
 
     public OrderModel() {
     }
 
-    public OrderModel(String orderID, String uid, String order, String orderStatus, String totalModel) {
+    public OrderModel(String orderID, String uid, String order, String orderStatus, String totalModel, String orderTime) {
         this.orderID = orderID;
         this.uid = uid;
         this.order = order;
         this.orderStatus = orderStatus;
         this.totalModel = totalModel;
+        this.orderTime = orderTime;
     }
 
     public String getOrderID() {
@@ -57,5 +59,13 @@ public class OrderModel {
 
     public void setTotalModel(String totalModel) {
         this.totalModel = totalModel;
+    }
+
+    public String getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
     }
 }

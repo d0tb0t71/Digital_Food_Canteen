@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    android:padding="20dp"
+    tools:context=".OrderDetails">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orders Details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/details_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orders ID :"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/order_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orders Details :"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        />
+    <TextView
+        android:id="@+id/order_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orders Price :"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        />
+
+
+
+
+
+
+</LinearLayout>

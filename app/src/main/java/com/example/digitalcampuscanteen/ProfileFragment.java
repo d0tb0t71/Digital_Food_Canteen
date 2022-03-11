@@ -27,7 +27,7 @@ public class ProfileFragment extends Fragment {
     View view;
     ImageView profile_pic;
     TextView pfullname,pmobile,pemail;
-    Button pedit_btn,logout_btn;
+    Button pedit_btn,logout_btn,my_orders;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     FirebaseUser user;
@@ -48,6 +48,7 @@ public class ProfileFragment extends Fragment {
 
         logout_btn = view.findViewById(R.id.logout_btn);
         pedit_btn = view.findViewById(R.id.pedit_btn);
+        my_orders = view.findViewById(R.id.my_orders);
 
         mAuth =FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -69,6 +70,22 @@ public class ProfileFragment extends Fragment {
         })
         ;
 
+
+        my_orders.setOnClickListener(v->{
+
+            startActivity(new Intent(getContext(),MyOrders.class));
+            getActivity().finish();
+
+        });
+
+        pedit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getContext(),EditProfile.class));
+
+            }
+        });
 
         logout_btn.setOnClickListener(v->{
 

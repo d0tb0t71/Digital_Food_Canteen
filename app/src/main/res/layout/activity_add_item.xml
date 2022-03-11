@@ -26,6 +26,7 @@
         android:padding="8dp"
         android:textColorHint="#8C8C8C"
         android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/edittext_bg"
         />
     <Spinner
@@ -38,6 +39,7 @@
         android:paddingLeft="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/edittext_bg"
+        android:visibility="gone"
         />
 
     <EditText
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:hint="Item Price..."
         android:padding="8dp"
+        android:layout_marginBottom="5dp"
         android:textColorHint="#8C8C8C"
         android:background="@drawable/edittext_bg"
         android:textColor="@color/white"
