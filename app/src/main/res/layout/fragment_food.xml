@@ -23,17 +23,11 @@
 
             >
 
-            <EditText
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Search here..."
-                android:background="@drawable/edittext_bg"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColorHint="#A5A5A5"
+                android:text=" "
                 />
-
-
 
         </LinearLayout>
 

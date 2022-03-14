@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalCampusCanteen">
         <activity
+            android:name=".TrainerDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AddTrainer"
+            android:exported="false" />
+        <activity
+            android:name=".ExcercisePage"
+            android:exported="false" />
+        <activity
+            android:name=".TrainerPage"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity

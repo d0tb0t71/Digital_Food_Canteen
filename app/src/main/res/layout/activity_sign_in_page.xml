@@ -13,16 +13,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Let's sign you in."
+        android:text="Sign in..."
         android:textColor="@color/white"
         android:textSize="25dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome back.\nYou've been missed!"
-        android:textColor="@color/white"
-        android:textSize="18dp"
         />
 
     <EditText

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#121218"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".TrainerPage">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/convergence"
+        android:padding="20dp"
+        android:text="Trainer Details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/trainer"
+        android:scaleType="centerCrop"
+        android:layout_margin="30dp"
+        />
+
+    <TextView
+        android:id="@+id/t_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trainer Name"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/t_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Age : ** "
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/t_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile : "
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/t_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email : "
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/t_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Short Description : "
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

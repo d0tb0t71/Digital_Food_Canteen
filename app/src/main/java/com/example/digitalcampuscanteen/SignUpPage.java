@@ -54,39 +54,43 @@ public class SignUpPage extends AppCompatActivity {
                 String Mobile = mobile.getText().toString();
 
 
+                if(Email.length()>0 && Name.length()>0 && Pass.length()>0 && Confirm_pass.length()>0 && Mobile.length()>0){
+                    mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
 
-                mAuth.createUserWithEmailAndPassword(Email,Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if(task.isSuccessful()){
-
-
-                            FirebaseUser user = mAuth.getCurrentUser();
-
-                            UserModel userModel = new UserModel(user.getUid(),"",Name,Email,Mobile,"admin");
-
-                            db = FirebaseFirestore.getInstance();
+                            if(task.isSuccessful()){
 
 
-                            db.collection("users")
-                                    .document(user.getUid())
-                                    .set(userModel);
+                                FirebaseUser user = mAuth.getCurrentUser();
 
-                            startActivity(new Intent(getApplicationContext(),VerifyEmail.class));
+                                UserModel userModel = new UserModel(user.getUid(),"",Name,Email,Mobile,"admin");
+
+                                db = FirebaseFirestore.getInstance();
+
+
+                                db.collection("users")
+                                        .document(user.getUid())
+                                        .set(userModel);
+
+                                startActivity(new Intent(getApplicationContext(),VerifyEmail.class));
+
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "Registration Failed\n"+task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
 
                         }
-                        else{
-                            Toast.makeText(getApplicationContext(), "Registration Failed\n"+task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(), "Registration Failed !\n"+e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
+                    });
+                }
 
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(), "Registration Failed !\n"+e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+
+
 
 
 
