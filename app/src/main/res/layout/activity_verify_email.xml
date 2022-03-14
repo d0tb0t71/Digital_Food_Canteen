@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/main_bg"
     android:padding="20dp"
-    android:gravity="center"
+    android:gravity="bottom"
     tools:context=".VerifyEmail">
 
     <TextView
@@ -35,9 +35,9 @@
 
     <Button
         android:id="@+id/verified_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verified"
+        android:text="Verify"
 
         />
 

@@ -98,6 +98,15 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
 
+        gosignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),SignInPage.class));
+                finish();
+            }
+        });
+
+
 
     }
 }

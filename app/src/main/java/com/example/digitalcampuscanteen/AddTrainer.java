@@ -1,5 +1,6 @@
 package com.example.digitalcampuscanteen;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,7 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.sql.Timestamp;
 
@@ -31,6 +37,25 @@ public class AddTrainer extends AppCompatActivity {
 
         add_trainer_btn = findViewById(R.id.add_trainer_btn);
 
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        DocumentReference documentReference = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+
+                String status = "" + value.getString("userStaus");
+
+                if(!status.equals("customer")){
+                    add_trainer_btn.setVisibility(View.GONE);
+                }
+
+
+            }
+        })
+        ;
+
 
         add_trainer_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +67,6 @@ public class AddTrainer extends AppCompatActivity {
                 String email = tEmail.getText().toString();
                 String des = tDes.getText().toString();
 
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
 
                 if(name.length()>5 && age.length()>0 && mobile.length()>10 && email.length()>5 && des.length()>3){
 
@@ -61,7 +85,7 @@ public class AddTrainer extends AppCompatActivity {
                     finish();
                 }else
                 {
-                    Toast.makeText(getApplicationContext(), "Enter correct informatio", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Enter correct information", Toast.LENGTH_SHORT).show();
                 }
 
 
