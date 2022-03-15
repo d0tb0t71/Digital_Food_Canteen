@@ -36,11 +36,6 @@ public class VerifyEmail extends AppCompatActivity {
         verified_btn.setOnClickListener(v->{
 
 
-            ProgressDialog progress = new ProgressDialog(this);
-            progress.setTitle("Loading");
-            progress.setMessage("Wait while checking...");
-            progress.setCancelable(false);
-            progress.show();
 
 
 
@@ -48,21 +43,13 @@ public class VerifyEmail extends AppCompatActivity {
 
 
             if(user.isEmailVerified()){
-                progress.show();
                 startActivity(new Intent(getApplicationContext(),Dashboard.class));
             }
             else{
                 user.sendEmailVerification();
-                progress.show();
-                Toast.makeText(getApplicationContext(), "Email Sent", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "An email has ben sent please verify", Toast.LENGTH_LONG).show();
             }
 
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
-                    progress.dismiss();
-                }
-            }, 2000);
 
 
 

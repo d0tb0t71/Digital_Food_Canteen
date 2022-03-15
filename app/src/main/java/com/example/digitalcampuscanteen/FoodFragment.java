@@ -61,7 +61,10 @@ public class FoodFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
 
-                String st = value.getString("userStatus");
+                String st = "";
+                st += value.getString("userStatus");
+
+                System.out.println("----------------------------------"+st);
 
                 if(st.equals("admin")){
                     add_item.setVisibility(View.VISIBLE);

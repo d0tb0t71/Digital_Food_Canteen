@@ -64,10 +64,9 @@ public class SignUpPage extends AppCompatActivity {
 
                                 FirebaseUser user = mAuth.getCurrentUser();
 
-                                UserModel userModel = new UserModel(user.getUid(),"",Name,Email,Mobile,"admin");
+                                UserModel userModel = new UserModel(user.getUid(),"",Name,Email,Mobile,"customer");
 
                                 db = FirebaseFirestore.getInstance();
-
 
                                 db.collection("users")
                                         .document(user.getUid())

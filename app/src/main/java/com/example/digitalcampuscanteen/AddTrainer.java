@@ -47,7 +47,7 @@ public class AddTrainer extends AppCompatActivity {
 
                 String status = "" + value.getString("userStaus");
 
-                if(!status.equals("customer")){
+                if(status.equals("customer")){
                     add_trainer_btn.setVisibility(View.GONE);
                 }
 
