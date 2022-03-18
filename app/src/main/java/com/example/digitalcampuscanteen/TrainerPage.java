@@ -71,7 +71,7 @@ public class TrainerPage extends AppCompatActivity {
 
 
                 if(st.equals("customer")){
-                    add_trainer.setVisibility(View.VISIBLE);
+                    add_trainer.setVisibility(View.GONE);
                 }
 
             }
