@@ -26,7 +26,7 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="app/src/main/res/layout/order_view.xml" value="0.33" />
         <entry key="app/src/main/res/layout/single_cart_item.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/single_item.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/single_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/trainer_view.xml" value="0.33" />
       </map>
     </option>

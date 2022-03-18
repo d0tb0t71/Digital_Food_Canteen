@@ -41,7 +41,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         ItemModel item = list.get(position);
 
         holder.itemTitle.setText(item.getItem_name());
-        holder.itemPrice.setText(item.getItem_price()+"$");
+        holder.itemPrice.setText(item.getItem_price()+"৳");
 
         holder.itemTitle.setOnClickListener(new View.OnClickListener() {
             @Override
