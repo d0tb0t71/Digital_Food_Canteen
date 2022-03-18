@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -57,6 +59,24 @@ public class TrainerPage extends AppCompatActivity {
 
             }
         });
+
+
+        DocumentReference documentReference = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                String st = "";
+                st += value.getString("userStatus");
+
+
+                if(st.equals("customer")){
+                    add_trainer.setVisibility(View.VISIBLE);
+                }
+
+            }
+        })
+        ;
 
         db.collection("trainer")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {

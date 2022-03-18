@@ -2,10 +2,10 @@ package com.example.digitalcampuscanteen;
 
 public class CartModel {
 
-    String item_id;
-    String item_name;
-    String item_price;
-    String item_quantity;
+    private String item_id;
+    private String item_name;
+    private String item_price;
+    private String item_quantity;
 
 
     public CartModel() {
