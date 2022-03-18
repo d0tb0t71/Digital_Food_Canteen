@@ -21,30 +21,120 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/convergence"
             android:padding="20dp"
-            android:text="Exercise List"
+            android:text="Exercise Tips"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/exercise_recycler"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1. Track your progress
+
+Whether you are exercising for weight loss, muscle gain or endurance, tracking your progress can make a big difference in motivation. Why? Some days you simply will not be in the mood to exercise – but if you look at physical evidence such as photos or statistics, you will be more likely to push through on hard days.
+
+2. Form over speed
+
+Struggling to keep up with your fitness class? It’s important to keep proper form during strength exercises or weight lifting to avoid injury. Shift your focus from the number of repetitions and make sure you have the correct form. Youtube videos are good sources to teach yourself the proper posture and form for your chosen exercise.
+
+3. Never rush through warm-up and cool-down sessions
+
+You might want to push straight to your desired speed while out running, or you think it’s okay to sneak into your workout class after warm-up or leave without doing the cool-down session. Don’t! It’s important to warm up and cool down properly to prepare your muscles for the workout ahead, and to speed up recovery and avoid injury.
+
+
+
+4. Sneak in workouts during the day
+
+No time for a gym workout? Even the smallest bouts of exercise can benefit your health, studies have shown. Climb the stairs, park your car further away from your office building or the shops (as long as it’s safe) and go for a walk during your lunch-break to get your heart rate up.
+
+woman working out in office
+
+5. Incorporate high-intensity interval training into your running sessions
+
+Have you been running for a while without seeing the desired results? Give your running routine a bit of oomph by incorporating HIIT sessions while out on the road – sprint for 30 seconds, walk for a minute. Or find your nearest hill and do repeat-sprints up the hill. You will get stronger and also burn more kilojoules.
+
+woman running stairs
+
+6. Think beyond crunches
+
+Getting carpet-burns from all those crunches but not seeing stronger abs? Rethink your abdominal workout routine and try strengthening exercises that will target your entire core, such as planks.woman planking
+
+7. Mix it up
+
+Don’t get stuck in a rut. Your body (and soul!) will eventually rebel and your weight-loss will plateau. Switch around your exercise routine occasionally to keep your body guessing and to ensure that you are targeting all muscle groups. Stuck for ideas? Consult the internet for quick, yet effective home workouts. Tired of the gym? Grab your trainers and hit the road.
+
+8. Listen to your body
+
+We can’t stress enough how important exercise is, but it’s just as vital to listen to your body when you are feeling sick. While pushing through a workout after a hard day can sometimes be a great idea, it’s not always the best idea to force your body into exercise.
+
+9. Eat carbs
+
+No, we are not saying you should devour unrefined carbs to your heart’s content. But a pre-workout snack can make a difference in your performance. Carbs are a main source of energy and limiting them might not be a good idea if you exercise. Choose wholegrain carbs with a protein, such as wholegrain toast and unrefined peanut butter.
+
+10. Don’t forego foam-rolling
+
+No, foam-rolling isn’t only for serious marathon-runners. Everyone can benefit from a good foam-rolling session – it speeds up recovery, massages the muscles to release tension and prevent delayed-onset muscle soreness.
+
+11. Invest in physiotherapy
+
+Did you think that only top-notch athletes need a physiotherapist on speed-dial? Wrong. Whether you are dealing with a slight niggle or struggling with an old injury, a physiotherapist can help you reach your full fitness potential, pain-free.
+
+woman having therapy on knee
+
+12. Be realistic and patient
+
+Don’t expect drastic, visible results after a week, two weeks, or even a month of a new exercise routine. You need to be consistent and patient. Don’t become despondent. If you aren't yielding results after a couple of months, it’s time to go back to the drawing board, or to assess your diet.
+
+13. Be prepared
+
+Plan ahead – pack your gym clothes or lay out your workout outfit before you go to bed. It’s easier to come up with excuses and skipping your workout if you are not prepared.
+
+14. You can’t outrun a bad diet
+
+Don’t think that you’ll be able to make up for a bad diet through exercise. Vital nutrients are important for your body to deliver its optimal performance – it’s not always just a case of calories in, calories out. You’ll need to change your diet to reap the full benefit of exercise.
+
+woman eating healthy breakfast
+
+15. Find your motivation
+
+There are days where you simply won’t have the motivation to keep going. Find something to push you through – like a family event where you can show off your leaner body. Are you planning to finish a marathon next year? Find that one long-term goal that will fire you up, and keep on reminding yourself of it.
+
+16. Get cleaning
+
+Gardening, changing your bed linen, vacuuming... All those activities can burn kilojoules. Keep active by tackling those boring chores.
+
+17. Combine working out with fun
+
+Don’t just go out for brunch on Saturday mornings – get your friends together and go on a hike, do a ParkRun, or attend a boot camp or yoga class. You can reward yourself with breakfast afterwards.
+
+women walking in park
+
+18. Start walking
+
+No idea how to start your fitness regime? Simply start walking. Follow this simple plan to walk off 5kg.
+
+19. Short and sweet
+
+Tabata training is the latest fitness trend. You don’t need to slave away in the gym for hours to yield results. This 4-minute workout can help you burn kilojoules in a short amount of time.
+
+20. Balance is everything
+
+Yes, you can overtrain. Rest days are crucial for muscle recovery and to keep you on the right path. "
+
+                android:textColor="@color/white"
+
+                />
+        </ScrollView>
 
     </LinearLayout>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_exercise"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_baseline_add_24"
-        app:fabCustomSize="50dp"
-        android:backgroundTint="@color/white"
-        android:padding="20dp"
-        />
+
 
 
 

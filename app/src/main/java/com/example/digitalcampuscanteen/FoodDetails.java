@@ -52,6 +52,7 @@ public class FoodDetails extends AppCompatActivity {
                 if(st.equals("admin")){
                     edit_item.setVisibility(View.VISIBLE);
                     delete_item.setVisibility(View.VISIBLE);
+                    add_to_cart.setVisibility(View.GONE);
                 }else if(st.equals("customer")){
                     add_to_cart.setVisibility(View.VISIBLE);
                 }
@@ -69,7 +70,7 @@ public class FoodDetails extends AppCompatActivity {
 
                 item_title.setText(""+value.getString("item_name"));
                 item_description.setText("Description : "+value.getString("item_des"));
-                item_price.setText("Item Price : "+value.getString("item_price") + "$");
+                item_price.setText("Item Price : "+value.getString("item_price") + "৳");
 
                 itemName = ""+value.getString("item_name");
                 itemDes = ""+value.getString("item_des");
